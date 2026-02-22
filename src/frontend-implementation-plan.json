@@ -1,0 +1,64 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add admin dashboard to view demo class bookings",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Create admin dashboard page to display all demo class booking requests in a table format",
+      "acceptanceCriteria": [
+        "Admin dashboard displays all demo class bookings in a readable table",
+        "Each booking shows name, class, course, and timestamp",
+        "Dashboard is accessible via navigation or direct URL"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/AdminDashboard.tsx",
+          "operation": "create",
+          "description": "Create a new admin dashboard page component that renders a table displaying all demo class bookings. The table should show columns for name, email, number of participants, preferred time, and submission timestamp. Use Tailwind CSS classes consistent with the existing website theme (terracotta, sage green, amber palette). Include a page header with the Takshashila Academia branding style."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Connect admin dashboard to backend using React Query to fetch and display booking data",
+      "acceptanceCriteria": [
+        "Dashboard fetches bookings from backend on load",
+        "Data updates automatically when new bookings are submitted",
+        "Loading and error states are handled gracefully"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/useQueries.ts",
+          "operation": "modify",
+          "description": "Add a React Query hook useGetAllSubmissions that calls the backend getAllSubmissions method. The hook should return booking data with proper TypeScript typing based on the BookingSubmission interface from backend.d.ts. Include loading and error states. Use the useActor hook to get the backend actor instance for making the query call."
+        },
+        {
+          "path": "frontend/src/pages/AdminDashboard.tsx",
+          "operation": "modify",
+          "description": "Import and use the useGetAllSubmissions hook to fetch booking data. Display a loading spinner while data is being fetched. Show an error message if the query fails. Render the bookings table only when data is successfully loaded. Handle the case when there are no bookings by displaying an appropriate message."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add navigation link in Header to access the admin dashboard",
+      "acceptanceCriteria": [
+        "Admin dashboard is accessible from the main navigation",
+        "Link is clearly labeled and visible to administrators"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import React Router components (BrowserRouter, Routes, Route) and the AdminDashboard page component. Wrap the existing single-page App content in a Route with path '/'. Add a new Route with path '/admin' that renders the AdminDashboard component. The existing App component sections (Header, Hero, Introduction, etc.) should remain on the home route."
+        },
+        {
+          "path": "frontend/src/components/Header.tsx",
+          "operation": "modify",
+          "description": "Add an 'Admin' navigation link to the existing menu items (after Contact). Use React Router's Link component to navigate to '/admin'. Ensure the link is styled consistently with other navigation items and is included in both desktop and mobile menus. The link should be clearly visible and labeled as 'Admin Dashboard' or 'Admin'."
+        }
+      ]
+    }
+  ]
+}

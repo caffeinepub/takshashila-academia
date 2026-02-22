@@ -1,0 +1,17 @@
+{
+  "frontend/src/App.tsx": "Main application component using TanStack Router with Outlet-based layout, defining routes for home page and admin dashboard with shared Header and Footer components.",
+  "frontend/src/components/Header.tsx": "Sticky navigation header with logo, desktop/mobile menu, smooth scroll navigation using TanStack Router hooks for navigation and route state management.",
+  "frontend/src/components/Hero.tsx": "Hero section with branding, updated tagline mentioning UPSC, MPSC, NEET, and JEE students, statistics, and inspirational quote \"Mistakes are proof that you are learning\" in a styled card.",
+  "frontend/src/components/Introduction.tsx": "Introduction section highlighting the four core values of the academy with icon cards for Excellence, Personalized Learning, Passionate Teaching, and Holistic Development.",
+  "frontend/src/components/Courses.tsx": "Displays five main course categories (UPSC with 7 subjects, MPSC with 3 programs, NEET with 3 subjects, JEE with 3 subjects, and Skill Development with 3 courses) targeting students preparing for competitive exams and career development.",
+  "frontend/src/components/About.tsx": "About section featuring Takshashila Academia's mission statement and six key highlights (Excellence in Education, Experienced Faculty, Small Batch Sizes, Comprehensive Study Material, Regular Assessments, Doubt Clearing Sessions) displayed in an icon-based grid layout without director information.",
+  "frontend/src/components/Testimonials.tsx": "Student testimonials section featuring six authentic quotes from students and parents with ratings and student success imagery.",
+  "frontend/src/components/Contact.tsx": "Contact section with updated contact information displaying three phone numbers (7719044646, 7666818376, 9529114803) with role labels, complete Pune address, email, and hours with prominent call-to-action buttons.",
+  "frontend/src/components/Footer.tsx": "Footer with logo, quick links, and updated contact information including all three phone numbers with role labels, complete Pune address, email, and attribution link to caffeine.ai with proper UTM tracking.",
+  "frontend/src/index.css": "Global styles with warm educational color palette (terracotta, sage green, golden amber) using OKLCH color system, custom fonts (Inter and Merriweather), and grid pattern utility.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom font families (Inter for body, Merriweather for headings) matching the educational theme.",
+  "frontend/src/hooks/useQueries.ts": "React Query hook useGetAllSubmissions that fetches all demo class booking submissions from the backend using the actor instance.",
+  "frontend/src/components/YouTubeGallery.tsx": "YouTube video gallery component displaying embedded videos from @studywithacademia channel in a responsive grid layout with a prominent subscribe button that links to the channel.",
+  "frontend/src/pages/AdminDashboard.tsx": "Admin dashboard page displaying demo class booking requests in a table with statistics cards showing total bookings, participants, and latest request status.",
+  "frontend/src/main.tsx": "Application entry point that wraps the app with QueryClientProvider and InternetIdentityProvider, rendering the root App component."
+}

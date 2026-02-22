@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Educational institute website with demo class booking form and student reviews showcasing UPSC, MPSC, NEET, and JEE students",
+  "architectural_notes": [
+    "Demo class bookings stored in backend without email notifications (email requires paid plan)"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-new-admin-dashboard-page-accessible-via-a-route-e-g-admin-that-displays-all-submitted-demo-class-booking-requests-in-a-table-format-showing-name-class-course-and-submission-timestamp",
+      "title": "Create a new admin dashboard page accessible via a route (e.g., /admin) that displays all submitted demo class booking requests in a table format showing name, class, course, and submission timestamp",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-connect-the-admin-dashboard-to-the-backend-using-react-query-to-fetch-and-display-real-time-booking-data",
+      "title": "Connect the admin dashboard to the backend using React Query to fetch and display real-time booking data",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-navigation-link-or-button-in-the-header-component-to-access-the-admin-dashboard",
+      "title": "Add a navigation link or button in the Header component to access the admin dashboard",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Add 'Book a Demo Class' button with form (name, class, course) that stores submissions viewable in backend",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Update student reviews to feature UPSC, MPSC, NEET, and JEE students",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add a backend query method to retrieve all stored demo class booking submissions",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Add admin dashboard to view demo class bookings",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

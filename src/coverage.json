@@ -1,0 +1,78 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-22T13:42:45.811Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 4,
+    "implemented": 3,
+    "items": [
+      {
+        "id": "REQ-1",
+        "summary": "Create a new admin dashboard page accessible via a route (e.g., /admin) that displays all submitted demo class booking requests in a table format showing name, class, course, and submission timestamp",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/pages/AdminDashboard.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/pages/AdminDashboard.tsx"
+        ]
+      },
+      {
+        "id": "REQ-2",
+        "summary": "Add a backend query method to retrieve all stored demo class booking submissions",
+        "status": "unknown",
+        "plannedFiles": [],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-3",
+        "summary": "Connect the admin dashboard to the backend using React Query to fetch and display real-time booking data",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/hooks/useQueries.ts",
+          "frontend/src/pages/AdminDashboard.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/hooks/useQueries.ts",
+          "frontend/src/pages/AdminDashboard.tsx"
+        ]
+      },
+      {
+        "id": "REQ-4",
+        "summary": "Add a navigation link or button in the Header component to access the admin dashboard",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/App.tsx",
+          "frontend/src/components/Header.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/App.tsx",
+          "frontend/src/components/Header.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/App.tsx",
+    "frontend/src/backend.d.ts",
+    "frontend/src/backend.ts",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/declarations/backend.did.d.ts",
+    "frontend/src/declarations/backend.did.js",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/pages/AdminDashboard.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

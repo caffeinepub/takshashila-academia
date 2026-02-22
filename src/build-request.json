@@ -1,0 +1,89 @@
+{
+  "kind": "build_request",
+  "title": "Add admin dashboard to view demo class bookings",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a new admin dashboard page accessible via a route (e.g., /admin) that displays all submitted demo class booking requests in a table format showing name, class, course, and submission timestamp",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Ok but make me see it when I view it"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Admin dashboard displays all demo class bookings in a readable table",
+        "Each booking shows name, class, course, and timestamp",
+        "Dashboard is accessible via navigation or direct URL"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add a backend query method to retrieve all stored demo class booking submissions",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Ok but make me see it when I view it"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend provides a query method that returns all demo bookings",
+        "Query returns name, class, course, and timestamp for each booking"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Connect the admin dashboard to the backend using React Query to fetch and display real-time booking data",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ],
+        "quotes": [
+          "Ok but make me see it when I view it"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dashboard fetches bookings from backend on load",
+        "Data updates automatically when new bookings are submitted",
+        "Loading and error states are handled gracefully"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add a navigation link or button in the Header component to access the admin dashboard",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-latest"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Admin dashboard is accessible from the main navigation",
+        "Link is clearly labeled and visible to administrators"
+      ]
+    }
+  ],
+  "constraints": [
+    "Use existing Tailwind CSS theme and styling patterns from the Takshashila Academia website",
+    "Follow the single-actor backend architecture",
+    "Use React Query for data fetching as per project conventions"
+  ],
+  "nonGoals": [
+    "Email sending functionality (not available on current plan)",
+    "User authentication or access control for the admin dashboard",
+    "Editing or deleting booking submissions",
+    "Exporting booking data to external formats"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

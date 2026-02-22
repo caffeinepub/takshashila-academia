@@ -1,0 +1,43 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-22T13:42:45.809Z",
+  "summary": "The diff implements all requested requirements. An admin dashboard was created at /admin displaying bookings in a table, a backend query method retrieves all submissions, React Query connects the frontend to backend with proper loading/error states, and a navigation link was added to the Header component. All acceptance criteria appear to be met.",
+  "missing_requirements": [
+    {
+      "id": "REQ-1",
+      "requirement": "Display submission timestamp in the table",
+      "reason": "The AdminDashboard.tsx table shows name, email, numParticipants, and preferredTime, but does not display a submission timestamp column. The BookingSubmission type in backend/main.mo also lacks a timestamp field.",
+      "evidence": [
+        "frontend/src/pages/AdminDashboard.tsx",
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Statistics cards showing Total Bookings, Total Participants, and Latest Request",
+      "reason": "The admin dashboard includes three stat cards with metrics (total bookings count, total participants sum, latest request status) that were not requested in the requirements. The requirement only specified a table format display.",
+      "evidence": [
+        "frontend/src/pages/AdminDashboard.tsx"
+      ]
+    },
+    {
+      "description": "Email column in the bookings table",
+      "reason": "The table displays an email column, but the requirement only specified showing name, class, course, and timestamp. Email was not mentioned as a required field to display.",
+      "evidence": [
+        "frontend/src/pages/AdminDashboard.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.85,
+  "changed_files": [
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/src/App.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/pages/AdminDashboard.tsx",
+    "project_state.json"
+  ]
+}
